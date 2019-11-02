@@ -5,7 +5,7 @@ reset_system :- retract(disease(_)), fail.
 reset_system :- retract(question(_, _)), fail.
 reset_system :- retract(diseaseName(_, _)), fail.
 reset_system :- retract(diagnosis(_, _)), fail.
-reset_system.
+reset_system. 
 
 open_connection :-
     odbc_connect('swiprolog', _,
@@ -137,6 +137,6 @@ init :-
     diagnosis(Symptons, Disease),
     %writeln(Symptons),
     check(Symptons),
-    write("Enfermedad psicológica: "),
+    write("Enfermedad psicolï¿½gica: "),
     diseaseName(Disease, Name),
     writeln(Name).
